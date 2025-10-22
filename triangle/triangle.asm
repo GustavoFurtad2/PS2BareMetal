@@ -313,7 +313,7 @@ dmaReset: ; this function resets the DMA channels, preparing the PS2 to send com
     ; $s1       = 1010 1100 ... 0000 0000
     ; immediate = 0000 0000 ... 0000 0001
     ; or result = 1010 1100 ... 0000 0001
-    ; if we use 2 which would be 0x00000002 it would turn on bit 1, if we use 3 which would be 0x00000004 it would turn on bit 2 because 0x00000004 in binary would be 0100
+    ; if we use 2 which would be 0x00000002 it would turn on bit 1, if we use 3 which would be 0x00000003 it would turn on bit 0 and 1 because 0x00000003 in binary would be 0011
     ori $s1, $s1, 1
     nop
     ; writes back the value to DMA_CTRL
