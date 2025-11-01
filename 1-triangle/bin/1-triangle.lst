@@ -515,18 +515,7 @@ dmaReset: ; this function resets the DMA channels, preparing the PS2 to send com
     ; In MIPS, $s0 to $s7 are "saved registers," meaning the value is preserved between functions.
     ; D2_CHCR represents the address of the CHCR(channel control register) for DMA channel 2. So now $s0 contains the value of D2_CHCR
 
-    ; The PS2 has 7 main DMA channels numbered 0 through 9:
-    ; 0 - VIF0
-    ; 1 - VIF1
-    ; 2 - GIF
-    ; 3 - from IPU
-    ; 4 - to IPU
-    ; 5 - SIF0
-    ; 6 - SIF1
-    ; 7 - SIF2
-    ; 8 - from SPR
-    ; 9 - to SPR
-
+    ; The PS2 has 7 main DMA channels numbered 0 through 9
     ; since we are using D2_CHCR, this means that what we are loading belongs to channel 2 which is the GIF
 
     li $s0, D2_CHCR
@@ -651,7 +640,7 @@ dmaReset: ; this function resets the DMA channels, preparing the PS2 to send com
     ; $s1       = 1010 1100 ... 0000 0000
     ; immediate = 0000 0000 ... 0000 0001
     ; or result = 1010 1100 ... 0000 0001
-    ; if we use 2 which would be 0x00000002 it would turn on bit 1, if we use 3 which would be 0x00000004 it would turn on bit 2 because 0x00000004 in binary would be 0100
+    ; if we use 2 which would be 0x00000002 it would turn on bit 1, if we use 3 which would be 0x00000003 it would turn on bit 0 and 1 because 0x00000003 in binary would be 0011
     ori $s1, $s1, 1
 
 0x001001e4: 0x36310001 ori $s1, $s1, 0x1                        cycles: 1
@@ -840,7 +829,7 @@ Program Info:
 Include Paths: .
                C
                /naken_asm-24/include
-               triangle
+               1-triangle
                /usr/local/share/naken_asm/include
                include
  Instructions: 116
