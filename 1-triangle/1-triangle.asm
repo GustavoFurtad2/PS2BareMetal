@@ -133,7 +133,7 @@ drawScreen:
     ; let's load D2_CHCR
     li $v0, D2_CHCR
     ; let's load the address where the data packet is
-    li $v1, redScreen
+    li $v1, purpleScreen
     ; let's save into MADR
     sw $v1, 0x10($v0)
     ; let's load 100000001, so then I activate the STR flag to start the transfer, and I also set the direction flag to 1, to then transfer from RAM to GIF
@@ -380,7 +380,7 @@ drawTriangleEnd:
 
     .align 128
 
-redScreen:
+purpleScreen:
 
     ; 14 registers
     dc64 GIF_TAG(14, 1, 0, 0, FLG_PACKED, 1), REG_A_D
@@ -414,4 +414,4 @@ redScreen:
     dc64 0x70000, REG_TEST_1
 
 ; label used to calculate size
-redScreenEnd:
+purpleScreenEnd:
