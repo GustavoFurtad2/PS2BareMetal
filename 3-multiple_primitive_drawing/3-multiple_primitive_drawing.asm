@@ -1,3 +1,23 @@
+; Based on naken_assembler
+; Original author: Michael Kohn
+;  Email: mike@mikekohn.net
+;   Web: https://www.mikekohn.net/
+;  License: GPLv3;
+; Original code: https://github.com/mikeakohn/naken_asm/blob/master/samples/playstation2/triangle.asm
+; 
+;
+; Modified version
+; Author: Gustavo Furtado
+;  Email: gustav0furt.fatality@gmail.com
+;
+; Copyright (C) 2025 Gustavo Furtado
+;
+; Changes Made:
+;  - Change background color
+;  - Change giftag to draw multiple sprites
+;  - Change the name of some labels
+;  - Comment code
+
 .ps2_ee
 
 .include "playstation2/registers_ee.inc"

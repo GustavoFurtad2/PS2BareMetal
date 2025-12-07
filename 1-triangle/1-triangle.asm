@@ -1,3 +1,23 @@
+; Based on naken_assembler
+; Original author: Michael Kohn
+;  Email: mike@mikekohn.net
+;   Web: https://www.mikekohn.net/
+;  License: GPLv3;
+; Original code: https://github.com/mikeakohn/naken_asm/blob/master/samples/playstation2/triangle.asm
+; 
+;
+; Modified version
+; Author: Gustavo Furtado
+;  Email: gustav0furt.fatality@gmail.com
+;
+; Copyright (C) 2025 Gustavo Furtado
+;
+; Changes Made:
+;  - Change background color
+;  - Change the position of the triangle
+;  - Change the name of some labels
+;  - Comment code
+
 .ps2_ee ; this directive let the assembler know which CPU this source file is assembled for
 
 .include "playstation2/registers_ee.inc" ; this is an include file provided by naken_asm which gave to us the EE Registers
